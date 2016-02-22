@@ -1,27 +1,29 @@
 module nml_manager
     implicit none
-    integer :: yr_str_ref    =   1948
-    integer :: yr_end_ref    =   2014
-    integer :: start_date    =   19480101
-    integer :: end_date      =   20141231
+    integer :: start_year    =   1948
+    integer :: end_year      =   2015
     integer :: num_lon       =   192
     integer :: num_lat       =   94
-    character(len = 500) :: tmax_fi     = "/nfs7/Data/NCEP-NCAR/daily/tmax/tmax.2m.gauss.1948_2015.nc" 
-    character(len = 500) :: out_fi      = "/nfs9/home/hwy/cal_hindex/data_out/NCEP-NCAR/hindex_1948_2014.nc" 
-    logical :: if_daily      =   .true.
+    character(len = 500) :: ref_fi     =    "/nfs7/Data/NCEP-NCAR/daily/tmin/tmin_ref_1961_1990_10p.nc" 
+    character(len = 500) :: in_fi      =    "/nfs7/Data/NCEP-NCAR/daily/tmin/tmin.2m.gauss.1948_2015.nc" 
+    character(len = 500) :: out_fi     =    "csdi_djf_1948_2014.nc" 
+    character(len = 500) :: lon_name   =    "lon"
+    character(len = 500) :: lat_name   =    "lat"
+    character(len = 500) :: tmin_name  =    "tmin"
     logical :: if_has_leap   =   .true.
     
     character(len = 500) :: namelist_file_name 
 
-    namelist /namelist_for_calc_hindex/ yr_str_ref, &
-                                     yr_end_ref, &
-                                     start_date, &
-                                     end_date,   & 
+    namelist /namelist_for_calc_hindex/ start_year, &
+                                        end_year, &
                                      num_lon,    &
                                      num_lat,    &
-                                     tmax_fi,    &
+                                     ref_fi,    &
+                                     in_fi,    &
                                      out_fi,     &
-                                     if_daily,   &
+                                     lon_name,     &
+                                     lat_name,     &
+                                     tmin_name,     &
                                      if_has_leap
 
 

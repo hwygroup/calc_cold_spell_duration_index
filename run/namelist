@@ -1,0 +1,13 @@
+&namelist_for_calc_hindex
+    start_year    =   1948
+    end_year      =   2015
+    num_lon       =   192
+    num_lat       =   94
+    ref_fi        =   "/nfs7/Data/NCEP-NCAR/daily/tmin/tmin_ref_1961_1990_10p.nc" 
+    in_fi         =   "/nfs7/Data/NCEP-NCAR/daily/tmin/tmin.2m.gauss.1948_2015.nc" 
+    out_fi        =   "csdi_djf_1948_2014.nc" 
+    lon_name      =   "lon" 
+    lat_name      =   "lat"
+    tmin_name     =   "tmin"
+    if_has_leap   =   .true.
+/

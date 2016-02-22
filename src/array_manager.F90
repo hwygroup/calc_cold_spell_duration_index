@@ -175,6 +175,9 @@ contains
             end if
         end do
         if (if_error) then
+            print *, a
+            print *, b(1)
+            print *, b(n)
             write(*,*) "Serious Problem: index_a_in_b_integer"
             stop
         end if 
@@ -198,6 +201,9 @@ contains
             end if
         end do
         if (if_error) then
+            print *, a
+            print *, b(1)
+            print *, b(n)
             write(*,*) "Serious Problem: index_a_in_b_float"
             stop
         end if 
